@@ -18,9 +18,9 @@ def index():
 def process_text():
     app_controller = AppController(logger, config)
     result = app_controller.jarvis_gen_ai_process_text(request.json)
-    return jsonify(result)
+    return result
 
 if __name__ == '__main__':
     logger.info('Starting APP')
     app.run()
-    #app.run(host='0.0.0.0', port=5000)
+    # app.run(host='0.0.0.0', port=5000)
